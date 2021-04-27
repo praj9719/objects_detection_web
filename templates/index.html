@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects Detector</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="/static/bootstrap.min.css" rel="stylesheet">
+</head>
+<body style="background-color: #f1f1f1; padding: 25px;">
+    <div class="container base" style="min-height: 93vh; ">
+        <div class="row">
+            <div class="col-md-12" style="min-height: 10vh; ">
+                <div class="row" style="margin: 5px;">
+                    <h1 class="col-md-10" style="margin-bottom: 10px;">Objects Detector</h1>
+                    <button type="submit" class="col-md-2  new-img-btn" onclick="openForm()"><b>+ NEW IMAGE</b></button>
+                </div>
+            </div>
+            <div class="row" style="margin: 10px;">
+                <div class="col-md-6" style="padding: 10px;"><img class="center-cropped base" src="data:image/jpg;base64,{{ img_in_base64 }}" alt="img_in"></div>
+                <div class="col-md-6" style="padding: 10px;"><img class="center-cropped base" src="data:image/jpg;base64,{{ img_out_base64 }}" alt="img_out"></div>
+            </div>
+            <h2 class="col-md-12" style="margin-top: 20px; margin-left: 20px;">About</h2>
+            <hr style="border: 1px solid gray; width: 90%;">
+            <div class="col-md-6"><p style="margin: 10px;">&emsp; Object detection is a computer vision technique that allows us to identify and locate objects in an image or video. With this kind of identification and localization, object detection can be used to count objects in a scene and determine and track their precise locations, all while accurately labeling them.</p></div>
+            <div class="col-md-6"><p style="margin: 10px;">&emsp; Object detection is a computer vision technique that allows us to identify and locate objects in an image or video. With this kind of identification and localization, object detection can be used to count objects in a scene and determine and track their precise locations, all while accurately labeling them.</p></div>
+        
+        
+        </div>
+    </div>
+
+    <div id="div_file_upload" class="form-popup">
+        <form class="form-container" enctype="multipart/form-data" method="POST" name="file-uploader">
+            <input type="file" name="my_uploaded_file" accept=".jpg" id="real-file" hidden="hidden" />
+            <div class="row">
+                <div class="col-md-12"><button type="button" id="choose-file-button">Choose a Image</button></div>
+                <div class="col-md-12"><span id="choose-file-text">No file choosen</span></div>
+                <div class="col-md-12"><button type="submit" id="submit-file" name="file_input" class="btn" onclick="closeForm()">Upload</button></div>
+            </div>
+        </form>
+        <div class="col-md-12" style="padding-left: 25px; padding-right: 25px; border-radius: 5px; background-color: white;"><button type="submit" class="cancel-popup" onclick="closeForm()">Cancel</button></div>
+    </div>
+
+
+
+    <script src="/static/script.js"></script>
+    <script src="/static/jquery.min.js"></script>
+    <script src="/static/bootstrap.min.js"></script>
+</body>
+</html>
