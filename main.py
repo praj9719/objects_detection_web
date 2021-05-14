@@ -6,7 +6,7 @@ import cv2
 
 app = Flask(__name__)
 
-url = "http://35.222.101.121:5050/detect"
+url = "http://34.72.141.162:5050/detect"
 headers = {"content-type": "image/jpg"}
 
 
